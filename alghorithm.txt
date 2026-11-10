@@ -1,0 +1,37 @@
+
+Algorithm SentenceAnalysis
+
+Variables
+    c : Character
+    length, words, vowels : Integer
+
+Begin
+    length ← 0
+    words ← 1
+    vowels ← 0
+
+    Read(c)
+
+    Repeat
+        length ← length + 1
+
+        If c = 'a' OR c = 'e' OR c = 'i' OR c = 'o' OR c = 'u'
+           OR c = 'A' OR c = 'E' OR c = 'I' OR c = 'O' OR c = 'U' Then
+            vowels ← vowels + 1
+        EndIf
+
+        If c = ' ' Then
+            words ← words + 1
+        EndIf
+
+        If c <> '.' Then
+            Read(c)
+        EndIf
+
+    Until c = '.'
+
+    Write("Length: ", length)
+    Write("Words: ", words)
+    Write("Vowels: ", vowels)
+
+End
